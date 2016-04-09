@@ -1,0 +1,23 @@
+<form action="/submit" method="get" id="submit-form">
+	<div class="form-group">
+		<label for="contact_name">Name</label>
+		<input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Name">
+	</div>
+	<div class="form-group">
+		<label for="contact_email">Email</label>
+		<input type="email" class="form-control" name="contact_email" id="contact_email" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<label>Street</label>
+		<input type="text" class="form-control" name="addresses[billing][street]" placeholder="Street">
+	</div>
+	<div class="form-group">
+		<label>Zip</label>
+		<input type="text" class="form-control" name="addresses[billing][zip]" placeholder="Zip">
+	</div>
+	<div class="form-group">
+		<label>City</label>
+		<input type="text" class="form-control" name="addresses[billing][city]" placeholder="City">
+	</div>
+	<button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+</form>
