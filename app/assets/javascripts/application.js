@@ -14,4 +14,34 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require form_serializer
 //= require_tree .
+
+$(document).ready(function() {
+
+	$('#submit-btn').click(function(e) {
+		e.preventDefault();
+
+		var $form = $('#submit-form');
+		var inputs = $form.serializeData();
+
+		$.ajax({
+			url: '/submit',
+			dataType: 'json',
+			data: {
+				data: inputs
+			},
+			success: function(resp) {
+				var deserialized_resp = $(resp).deserializeData();
+				$.each(deserialized_resp, function(name, value) {
+					$("input[name='" + name + "']", $form).val(value);
+				})
+			},
+			error: function() {
+				alert('Something went wrong!');
+			}
+		})
+
+	});
+
+});

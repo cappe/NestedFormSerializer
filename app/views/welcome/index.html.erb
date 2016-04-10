@@ -1,0 +1,58 @@
+<form action="/submit" method="get" id="submit-form">
+	<div class="form-group">
+		<label for="contact_name">Name</label>
+		<input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Name">
+	</div>
+	<div class="form-group">
+		<label for="contact_email">Email</label>
+		<input type="email" class="form-control" name="contact_email" id="contact_email" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<label for="credit_number">Credit Number</label>
+		<input type="text" class="form-control" name="credit[number]" id="credit_number" placeholder="Credit Number">
+	</div>
+	<div class="form-group">
+		<label for="credit_cvs">Credit CVS</label>
+		<input type="text" class="form-control" name="credit[csv]" id="credit_cvs" placeholder="Credit CVS">
+	</div>
+
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist" style="margin: 30px 0 20px">
+		<li role="presentation" class="active"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
+		<li role="presentation"><a href="#shipping" aria-controls="shipping" role="tab" data-toggle="tab">Shipping</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="billing">
+			<div class="form-group">
+				<label>Street</label>
+				<input type="text" class="form-control" name="addresses[billing][street]" placeholder="Street">
+			</div>
+			<div class="form-group">
+				<label>Zip</label>
+				<input type="text" class="form-control" name="addresses[billing][zip]" placeholder="Zip">
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<input type="text" class="form-control" name="addresses[billing][city]" placeholder="City">
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="shipping">
+			<div class="form-group">
+				<label>Street</label>
+				<input type="text" class="form-control" name="addresses[shipping][street]" placeholder="Street">
+			</div>
+			<div class="form-group">
+				<label>Zip</label>
+				<input type="text" class="form-control" name="addresses[shipping][zip]" placeholder="Zip">
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<input type="text" class="form-control" name="addresses[shipping][city]" placeholder="City">
+			</div>
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+</form>
