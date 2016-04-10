@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require form_serializer
+//= require nested_form_serializer.js
 //= require_tree .
 
 $(document).ready(function() {
